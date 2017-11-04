@@ -28,7 +28,7 @@ var BasicView = FC.BasicView = View.extend({
 			else {
 				this.dayGrid.cellWeekNumbersVisible = false;
 				this.dayGrid.colWeekNumbersVisible = true;
-			};
+			}
 		}
 
 		this.addChild(this.dayGrid);
@@ -57,7 +57,7 @@ var BasicView = FC.BasicView = View.extend({
 		var end = this.calendar.msToUtcMoment(renderUnzonedRange.endMs, isRangeAllDay);
 
 		// year and month views should be aligned with weeks. this is already done for week
-		if (/^(year|month)$/.test(currentRangeUnit)) {
+		if (/^(year|quarter|month)$/.test(currentRangeUnit)) {
 			start.startOf('week');
 
 			// make end-of-week if not already
@@ -71,7 +71,7 @@ var BasicView = FC.BasicView = View.extend({
 
 
 	executeDateRender: function(dateProfile) {
-		this.dayGrid.breakOnWeeks = /year|month|week/.test(dateProfile.currentRangeUnit);
+		this.dayGrid.breakOnWeeks = /year|quarter|month|week/.test(dateProfile.currentRangeUnit);
 
 		View.prototype.executeDateRender.apply(this, arguments);
 	},

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e018ed28-091d-42a7-ae61-691557f4ee47" name="FullCalendar-BS3-PHP-MySQL" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\Users\regula\PhpstormProjects\FullCalendar-BS3-PHP-MySQL\dist" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

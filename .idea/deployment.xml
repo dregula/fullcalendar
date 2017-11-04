@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="FullCalendar-BS3-PHP-MySQL">
+    <serverData>
+      <paths name="FullCalendar-BS3-PHP-MySQL">
+        <serverdata>
+          <mappings>
+            <mapping deploy="..\..\PhpstormProjects\FullCalendar-BS3-PHP-MySQL\dist" local="$PROJECT_DIR$/dist" web="/dist" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -20,3 +20,11 @@ fcViews.month = {
 		fixedWeekCount: true
 	}
 };
+
+fcViews.quarter = {
+	'class': QuarterView,
+	duration: { months: 4 }, // important for prev/next
+	defaults: {
+		isAuto: false
+	}
+};

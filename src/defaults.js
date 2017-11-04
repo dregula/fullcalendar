@@ -54,6 +54,7 @@ Calendar.defaults = {
 		today: 'today',
 		month: 'month',
 		week: 'week',
+		quarter: 'quarter',
 		day: 'day'
 	},
 	//buttonIcons: null,

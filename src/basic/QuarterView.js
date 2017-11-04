@@ -1,8 +1,8 @@
 
-/* A month view with day cells running in rows (one-per-week) and columns
+/* A quarter (multi-month) view with day cells running in rows (one-per-week) and columns
 ----------------------------------------------------------------------------------------------------------------------*/
 
-var MonthView = FC.MonthView = BasicView.extend({
+var QuarterView = FC.QuarterView = BasicView.extend({
 
 
 	// Computes the date range that will be rendered.
@@ -10,15 +10,15 @@ var MonthView = FC.MonthView = BasicView.extend({
 		var renderUnzonedRange = BasicView.prototype.buildRenderRange.apply(this, arguments);
 		var start = this.calendar.msToUtcMoment(renderUnzonedRange.startMs, isRangeAllDay);
 		var end = this.calendar.msToUtcMoment(renderUnzonedRange.endMs, isRangeAllDay);
-		var rowCnt;
+		// var rowCnt;
 
-		// ignore isFixedWeeks
-		if (this.isFixedWeeks()) {
-			rowCnt = Math.ceil( // could be partial weeks due to hiddenDays
-				end.diff(start, 'weeks', true) // dontRound=true
-			);
-			end.add(6 - rowCnt, 'weeks');
-		}
+		// // ignore fixed-weeks
+		// if (this.isFixedWeeks()) {
+		// 	rowCnt = Math.ceil( // could be partial weeks due to hiddenDays
+		// 		end.diff(start, 'weeks', true) // dontRound=true
+		// 	);
+		// 	end.add(6 - rowCnt, 'weeks');
+		// }
 
 		return new UnzonedRange(start, end);
 	},

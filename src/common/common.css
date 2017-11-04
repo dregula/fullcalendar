@@ -593,8 +593,10 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .fc-day-grid-event .fc-content { /* force events to be one-line tall */
-	white-space: nowrap;
-	overflow: hidden;
+/*	TRY: 2017-11-04 white-space: nowrap;
+	overflow: hidden;  */
+	white-space: normal;
+	overflow: visible;
 }
 
 .fc-day-grid-event .fc-time {
